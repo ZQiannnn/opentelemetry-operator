@@ -141,7 +141,7 @@ func (in *Instrumentation) validate() error {
 func (in *Instrumentation) validateEnv(envs []corev1.EnvVar) error {
 	for _, env := range envs {
 		if !strings.HasPrefix(env.Name, envPrefix) && !strings.HasPrefix(env.Name, envSplunkPrefix) {
-			return fmt.Errorf("env name should start with \"OTEL_\" or \"SPLUNK_\": %s", env.Name)
+			//return fmt.Errorf("env name should start with \"OTEL_\" or \"SPLUNK_\": %s", env.Name)
 		}
 	}
 	return nil
